@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,20 +14,29 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ypLogoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="wom-Tx-UqT">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uZG-VV-Bi8">
+                                <rect key="frame" x="32" y="84" width="311" height="455"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="7HX-RU-aBe">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="455"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7HX-RU-aBe" firstAttribute="centerY" secondItem="uZG-VV-Bi8" secondAttribute="centerY" id="xmW-fe-KGb"/>
+                                    <constraint firstItem="7HX-RU-aBe" firstAttribute="centerX" secondItem="uZG-VV-Bi8" secondAttribute="centerX" id="xw5-c6-PJL"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="ypLightGreen"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="wom-Tx-UqT" secondAttribute="trailing" id="8kT-C4-uDh"/>
-                            <constraint firstAttribute="leading" secondItem="wom-Tx-UqT" secondAttribute="leading" id="Ewp-T9-Qp6"/>
-                            <constraint firstAttribute="bottom" secondItem="wom-Tx-UqT" secondAttribute="bottom" id="VZT-cq-2PY"/>
-                            <constraint firstItem="wom-Tx-UqT" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ZQw-V7-ZYx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uZG-VV-Bi8" secondAttribute="trailing" constant="32" id="9kr-e5-0CQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uZG-VV-Bi8" secondAttribute="bottom" constant="128" id="FHc-9N-XtR"/>
+                            <constraint firstItem="uZG-VV-Bi8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="RCE-UG-hBa"/>
+                            <constraint firstItem="uZG-VV-Bi8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="nSa-nm-hgY"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -37,9 +46,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ypLogoBackground" width="375" height="812"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="logo" width="140" height="140"/>
+        <namedColor name="ypLightGreen">
+            <color red="0.6470588235294118" green="0.96078431372549022" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
