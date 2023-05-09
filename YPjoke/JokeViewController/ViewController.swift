@@ -76,12 +76,13 @@ class ViewController: UIViewController {
         resetJokes()
     }
     
-    
-    //    Action for the No button
+    //    Action for the hint button
     @IBAction private func hintButtonClicked(_ sender: UIButton) {
         showAlert(joke: jokes[currentJokeIndex])
     }
+ 
     
+   
     // MARK: - Methods
     //
     //
