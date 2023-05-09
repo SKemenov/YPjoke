@@ -20,39 +20,51 @@ class ViewController: UIViewController {
     @IBOutlet private weak var resetButton: UIButton!
     @IBOutlet private weak var hintButton: UIButton!
 
+    // MARK: - Enums
+    //
+    // enum for all types of jokes
+    enum JokeType: String {
+        case general
+    }
+
     // MARK: - Structs
     //
-    // it's empty
+    // main struct to hold all information about a joke
+    struct Joke {
+        let jokeId: Int
+        let jokeTitle: String
+        let jokeType: JokeType
+        let jokeHint: String
+    }
 
     //  MARK: - Variables, Constants
     //
-    //
-    private var jokeTitle: String = "Why did the chicken get a penalty?"
-    private var jokeType: String = "general"
-    private var jokeID: Int = 256
-    private var jokeHint: String = "For fowl play"
+    // an index for the jokes array
+    private var currentJokeIndex: Int = 0
     
     // MARK: - Mock Data
     //
-    // it's empty
+    // make jokes array and fill in an initial joke from the Figma template
+    private let jokes: [Joke] = [
+        Joke(
+            jokeId: 256,
+            jokeTitle: "Why did the chicken get a penalty?",
+            jokeType: .general,
+            jokeHint: "For fowl play")
+    ]
     
     // MARK: - Lifecycle
     //
     //
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+        // init all UILabel's labels
         jokeTitleLabel.text = "Joke ID"
-        jokeValueLabel.text = "\(jokeID)"
-        
         typeTitleLabel.text = "Type"
-        typeValueLabel.text = jokeType
-        
         setupLabel.text = "Setup"
-        jokeLabel.text = jokeTitle
         
-        resetButton.setImage(UIImage(systemName: "repeat"), for: .normal)
+        // load the first joke
+        resetJokes()
         
     }
 
@@ -61,25 +73,46 @@ class ViewController: UIViewController {
     //
     //    Action for the reset button
     @IBAction private func resetButtonClicked(_ sender: UIButton) {
-    // the code should be here
+        resetJokes()
     }
     
     
     //    Action for the No button
     @IBAction private func hintButtonClicked(_ sender: UIButton) {
-        showAlert()
+        showAlert(joke: jokes[currentJokeIndex])
     }
     
     // MARK: - Methods
     //
     //
+    // update UI data from the Joke's data
+    private func showJoke(joke: Joke) {
+        jokeValueLabel.text = "\(joke.jokeId)"
+        typeValueLabel.text = joke.jokeType.rawValue
+        jokeLabel.text = joke.jokeTitle
+    }
+
+    
+    // reset the joke viewModel
+    private func resetJokes() {
+        // reset joke's index
+        currentJokeIndex = 0
+        
+        // load the first joke
+        let firstJoke = jokes[currentJokeIndex]
+        
+        // init all UILabel's text from the firstJoke
+        showJoke(joke: firstJoke)
+    }
+    
+    
     // Method to show a hint alert
-    private func showAlert() {
+    private func showAlert(joke: Joke) {
         
         // Let's start with constants for the alert and the action
         let alert = UIAlertController(
             title: "Punchline",
-            message: jokeHint,
+            message: joke.jokeHint,
             preferredStyle: .alert)
         
         // prepare the action (a button) and to-do steps
