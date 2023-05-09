@@ -227,6 +227,9 @@
                                                 <integer key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="resetButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cvU-Gr-XZY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZA-Rc-RnE" userLabel="Hint Button">
                                         <rect key="frame" x="80" y="0.0" width="249" height="64"/>
@@ -240,6 +243,9 @@
                                                 <integer key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="hintButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6fZ-hZ-4Y7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -258,6 +264,16 @@
                             <constraint firstItem="Cxb-nu-mVJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="swo-lo-25W"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hintButton" destination="3ZA-Rc-RnE" id="fBl-nt-AH6"/>
+                        <outlet property="jokeLabel" destination="RAg-Dr-DzH" id="xJv-Oc-J8r"/>
+                        <outlet property="jokeTitleLabel" destination="s0a-Fh-HkB" id="VHm-Cx-hcm"/>
+                        <outlet property="jokeValueLabel" destination="2Wv-di-zKn" id="7RO-lM-3zG"/>
+                        <outlet property="resetButton" destination="9Ha-JZ-Vs8" id="0WP-ML-4FX"/>
+                        <outlet property="setupLabel" destination="Yig-VW-jzb" id="IQl-J4-Wms"/>
+                        <outlet property="typeTitleLabel" destination="OPj-WS-yI9" id="yxE-c6-fND"/>
+                        <outlet property="typeValueLabel" destination="YX4-94-p6Z" id="g8y-cH-gYs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
