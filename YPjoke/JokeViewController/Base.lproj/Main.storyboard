@@ -59,7 +59,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="NH2-EF-ed6"/>
                                         </constraints>
-                                        <edgeInsets key="layoutMargins" top="0.0" left="24" bottom="0.0" right="24"/>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="24" bottom="0.0" trailing="24"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="8"/>
@@ -91,55 +91,37 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="qSY-8i-xjH"/>
                                         </constraints>
-                                        <edgeInsets key="layoutMargins" top="0.0" left="24" bottom="0.0" right="24"/>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="24" bottom="0.0" trailing="24"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jsu-bc-mD7" userLabel="Setup Stack View">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="jsu-bc-mD7" userLabel="Setup Stack View">
                                         <rect key="frame" x="0.0" y="176" width="329" height="244"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpv-gF-wBf" userLabel="Spacer">
-                                                <rect key="frame" x="0.0" y="0.0" width="24" height="244"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yig-VW-jzb" userLabel="Setup Title Label">
+                                                <rect key="frame" x="24" y="24" width="281" height="24"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="24" id="uGG-4E-lSn"/>
+                                                    <constraint firstAttribute="height" constant="24" id="Cbu-a0-soC"/>
                                                 </constraints>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="B68-Qp-PXc">
-                                                <rect key="frame" x="24" y="0.0" width="281" height="244"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto Medium" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="B68-Qp-PXc" userLabel="Joke Stack View">
+                                                <rect key="frame" x="24" y="66" width="281" height="154"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08w-6B-iyv" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="281" height="24"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="24" id="SBf-Jd-S7i"/>
-                                                        </constraints>
-                                                    </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yig-VW-jzb" userLabel="Setup Title Label">
-                                                        <rect key="frame" x="0.0" y="24" width="281" height="24"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="24" id="Cbu-a0-soC"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto Medium" pointSize="16"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zeE-bK-kyW" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="48" width="281" height="18"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="18" id="A1p-pq-N0q"/>
-                                                        </constraints>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nlP-ru-JPm" userLabel="Liner">
-                                                        <rect key="frame" x="0.0" y="66" width="281" height="2"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d30-1v-YJU" userLabel="Line">
+                                                        <rect key="frame" x="0.0" y="0.0" width="281" height="2"/>
                                                         <color key="backgroundColor" name="ypBlack"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="2" id="DVR-Gp-LRv"/>
+                                                            <constraint firstAttribute="height" constant="2" id="A6o-R9-jhI"/>
                                                         </constraints>
-                                                    </stackView>
+                                                    </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="253" text="A joke text should be here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAg-Dr-DzH" userLabel="Joke Label">
-                                                        <rect key="frame" x="0.0" y="68" width="281" height="150"/>
+                                                        <rect key="frame" x="0.0" y="2" width="281" height="150"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -149,30 +131,18 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0M-xa-pyo" userLabel="Liner">
-                                                        <rect key="frame" x="0.0" y="218" width="281" height="2"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LcX-Ku-cps" userLabel="Line">
+                                                        <rect key="frame" x="0.0" y="152" width="281" height="2"/>
                                                         <color key="backgroundColor" name="ypBlack"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="2" id="Xbo-bT-JR6"/>
+                                                            <constraint firstAttribute="height" constant="2" id="3Rw-cl-JkO"/>
                                                         </constraints>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G0H-Zw-eAx" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="220" width="281" height="24"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="24" id="5Fc-tv-znk"/>
-                                                        </constraints>
-                                                    </stackView>
+                                                    </view>
                                                 </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7G1-u7-Dhr" userLabel="Spacer">
-                                                <rect key="frame" x="305" y="0.0" width="24" height="244"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="24" id="0Az-fW-bJQ"/>
-                                                    <constraint firstAttribute="width" constant="24" id="1Zr-T3-gld"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" name="ypPink"/>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="24" bottom="24" trailing="24"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="8"/>
