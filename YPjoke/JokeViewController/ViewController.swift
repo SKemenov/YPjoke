@@ -20,22 +20,9 @@ class ViewController: UIViewController {
     @IBOutlet private weak var resetButton: UIButton!
     @IBOutlet private weak var hintButton: UIButton!
 
-    // MARK: - Enums
-    //
-    // enum for all types of jokes
-    enum JokeType: String {
-        case general
-    }
+    
 
-    // MARK: - Structs
-    //
-    // main struct to hold all information about a joke
-    struct Joke {
-        let jokeId: Int
-        let jokeTitle: String
-        let jokeType: JokeType
-        let jokeHint: String
-    }
+    
 
     //  MARK: - Variables, Constants
     //
@@ -71,12 +58,12 @@ class ViewController: UIViewController {
     // MARK: - Actions
     //
     //
-    //    Action for the reset button
+    ///    Action for the reset button
     @IBAction private func resetButtonClicked(_ sender: UIButton) {
         resetJokes()
     }
     
-    //    Action for the hint button
+    ///   Action for the hint button
     @IBAction private func hintButtonClicked(_ sender: UIButton) {
         showAlert(joke: jokes[currentJokeIndex])
     }
@@ -86,7 +73,8 @@ class ViewController: UIViewController {
     // MARK: - Methods
     //
     //
-    // update UI data from the Joke's data
+    /// Private method to update UI data from the Joke's data
+    ///  - parameter joke: the `joke` struct yses as a Model
     private func showJoke(joke: Joke) {
         jokeValueLabel.text = "\(joke.jokeId)"
         typeValueLabel.text = joke.jokeType.rawValue
@@ -107,7 +95,7 @@ class ViewController: UIViewController {
     }
     
     
-    // Method to show a hint alert
+    /// Private method to show an alert with a hint for the current joke
     private func showAlert(joke: Joke) {
         
         // Let's start with constants for the alert and the action
@@ -130,4 +118,25 @@ class ViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
 }
+
+//extension ViewController {
+//    // MARK: - Structs
+//    //
+//    // main struct to hold all information about a joke
+//    struct Joke {
+//        let jokeId: Int
+//        let jokeTitle: String
+//        let jokeType: JokeType
+//        let jokeHint: String
+//    }
+//}
+
+//extension ViewController {
+//    // MARK: - Enums
+//    //
+//    /// enum for all types of jokes
+//    enum JokeType: String {
+//        case general
+//    }
+//}
 
