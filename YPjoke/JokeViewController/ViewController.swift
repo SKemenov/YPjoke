@@ -119,24 +119,3 @@ class ViewController: UIViewController {
     }
 }
 
-//extension ViewController {
-//    // MARK: - Structs
-//    //
-//    // main struct to hold all information about a joke
-//    struct Joke {
-//        let jokeId: Int
-//        let jokeTitle: String
-//        let jokeType: JokeType
-//        let jokeHint: String
-//    }
-//}
-
-//extension ViewController {
-//    // MARK: - Enums
-//    //
-//    /// enum for all types of jokes
-//    enum JokeType: String {
-//        case general
-//    }
-//}
-

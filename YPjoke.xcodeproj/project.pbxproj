@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E938906A2A1135AF00952563 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93890692A1135AF00952563 /* Array+Extensions.swift */; };
 		E959A5DE2A0C151E00358238 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = E959A5DD2A0C151D00358238 /* Joke.swift */; };
 		E959A5E12A0C167600358238 /* JokeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E959A5E02A0C167600358238 /* JokeType.swift */; };
 		E9B865572A07BC3F00F78FA3 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9B8654A2A07BC3F00F78FA3 /* Roboto-Medium.ttf */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E93890692A1135AF00952563 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		E959A5DD2A0C151D00358238 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		E959A5E02A0C167600358238 /* JokeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeType.swift; sourceTree = "<group>"; };
 		E9B8654A2A07BC3F00F78FA3 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
@@ -67,13 +69,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E959A5DF2A0C152500358238 /* Model */ = {
+		E93890682A11357700952563 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E93890692A1135AF00952563 /* Array+Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E959A5DF2A0C152500358238 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				E959A5DD2A0C151D00358238 /* Joke.swift */,
 				E959A5E02A0C167600358238 /* JokeType.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E9B865492A07BC3F00F78FA3 /* Roboto */ = {
@@ -115,11 +125,12 @@
 		E9FEE9222A07937D003E0583 /* YPjoke */ = {
 			isa = PBXGroup;
 			children = (
+				E959A5DF2A0C152500358238 /* Models */,
+				E9FEE9392A0794B5003E0583 /* JokeViewController */,
+				E93890682A11357700952563 /* Helpers */,
+				E9FEE9372A079488003E0583 /* Resources */,
 				E9FEE9232A07937D003E0583 /* AppDelegate.swift */,
 				E9FEE9252A07937D003E0583 /* SceneDelegate.swift */,
-				E9FEE9392A0794B5003E0583 /* JokeViewController */,
-				E9FEE9372A079488003E0583 /* Resources */,
-				E959A5DF2A0C152500358238 /* Model */,
 			);
 			path = YPjoke;
 			sourceTree = "<group>";
@@ -237,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9FEE9282A07937D003E0583 /* ViewController.swift in Sources */,
+				E938906A2A1135AF00952563 /* Array+Extensions.swift in Sources */,
 				E9FEE9242A07937D003E0583 /* AppDelegate.swift in Sources */,
 				E9FEE9262A07937D003E0583 /* SceneDelegate.swift in Sources */,
 				E959A5DE2A0C151E00358238 /* Joke.swift in Sources */,

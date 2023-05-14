@@ -8,7 +8,7 @@
 import Foundation
     // MARK: - Enums
     //
-    /// enum for all types of jokes
+    /// An enum for all types of jokes
     enum JokeType: String {
         case general
     }
