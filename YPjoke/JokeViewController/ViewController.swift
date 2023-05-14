@@ -19,19 +19,19 @@ class ViewController: UIViewController {
     @IBOutlet private weak var jokeLabel: UILabel!
     @IBOutlet private weak var resetButton: UIButton!
     @IBOutlet private weak var hintButton: UIButton!
-
     
-
     
-
+    
+    
+    
     //  MARK: - Variables, Constants
     //
-    // an index for the jokes array
+    /// an index for the jokes array
     private var currentJokeIndex: Int = 0
     
     // MARK: - Mock Data
     //
-    // make jokes array and fill in an initial joke from the Figma template
+    /// make jokes array and fill in an initial joke from the Figma template
     private let jokes: [Joke] = [
         Joke(
             jokeId: 256,
@@ -54,35 +54,39 @@ class ViewController: UIViewController {
         resetJokes()
         
     }
-
+    
     // MARK: - Actions
     //
     //
-    ///    Action for the reset button
+    ///    An action for the reset button
+    ///
+    ///    used `resetJokes()` method to reset and show jokes from the begining
     @IBAction private func resetButtonClicked(_ sender: UIButton) {
         resetJokes()
     }
     
-    ///   Action for the hint button
+    ///   An action for the hint button
+    ///
+    ///    used `showAlert(joke:)` method to show the joke by it index
     @IBAction private func hintButtonClicked(_ sender: UIButton) {
         showAlert(joke: jokes[currentJokeIndex])
     }
- 
     
-   
+    
+    
     // MARK: - Methods
     //
     //
-    /// Private method to update UI data from the Joke's data
-    ///  - parameter joke: the `joke` struct yses as a Model
+    /// A private method to update UI data from the Joke's data
+    ///  - parameter joke: the `Joke` struct used as an input Model to present
     private func showJoke(joke: Joke) {
         jokeValueLabel.text = "\(joke.jokeId)"
         typeValueLabel.text = joke.jokeType.rawValue
         jokeLabel.text = joke.jokeTitle
     }
-
     
-    // reset the joke viewModel
+    
+    /// A private method to reset the joke viewModel
     private func resetJokes() {
         // reset joke's index
         currentJokeIndex = 0
@@ -95,7 +99,7 @@ class ViewController: UIViewController {
     }
     
     
-    /// Private method to show an alert with a hint for the current joke
+    /// A private method to  to show an alert with a hint for the current joke
     private func showAlert(joke: Joke) {
         
         // Let's start with constants for the alert and the action

@@ -10,12 +10,16 @@ import Foundation
 
 // MARK: - Structs
 //
-/// A main struct to hold all information about a joke
-/// - Parameters:
-///  - jokeId: number to hold an uniq joke's number
-///  - jokeTitle: String with a joke
-///  - jokeType: enum to categorize the joke
-///  - jokeHint: String to hold a hint for the joke
+/// A main structure to hold all data about a joke.
+///
+/// The `Joke` structure has the following properties:
+///
+/// - term **jokeId: Int**: Used to represent an uniqic number of the current joke.
+/// - term **jokeTitle: String**: Used to represent the current joke by itself.
+/// - term **jokeType: JokeType**: Used to represent a type of the current joke.
+/// - term **jokeHint: String**: Used to represent a hint for the current joke.
+///
+/// - Important: The `Joke` structure has no methods.
 struct Joke {
     let jokeId: Int
     let jokeTitle: String

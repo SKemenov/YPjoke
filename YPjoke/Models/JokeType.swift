@@ -6,10 +6,14 @@
 //
 
 import Foundation
-    // MARK: - Enums
-    //
-    /// An enum for all types of jokes
-    enum JokeType: String {
-        case general
-    }
+// MARK: - Enums
+//
+/// An enumiration for all types of jokes
+///
+/// The `JokeType` enumeration has the following case(s):
+///
+///  - term **general**: for common type of jokes
+enum JokeType: String {
+    case general
+}
 
